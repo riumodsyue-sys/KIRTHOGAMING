@@ -16,9 +16,18 @@ android {
     }
 
     buildTypes {
+        debug {
+            minifyEnabled false
+        }
         release {
             minifyEnabled false
             signingConfig signingConfigs.debug
+        }
+    }
+
+    packaging {
+        jniLibs {
+            useLegacyPackaging true
         }
     }
 
